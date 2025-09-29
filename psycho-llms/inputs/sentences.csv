@@ -1,0 +1,17 @@
+item,sentence,condition
+1,The dog is brown.,sing-gram
+1,The dog are brown.,sing-ungram
+1,The dogs are brown.,pl-gram
+1,The dogs is brown.,pl-ungram
+2,The painting is colorful.,sing-gram
+2,The painting are colorful.,sing-ungram
+2,The paintings are colorful.,pl-gram
+2,The paintings is colorful.,pl-ungram
+3,The wall is green.,sing-gram
+3,The wall are green.,sing-ungram
+3,The walls are green.,pl-gram
+3,The walls is green.,pl-ungram
+4,The cat is orange.,sing-gram
+4,The cat are orange.,sing-ungram
+4,The cats are orange.,pl-gram
+4,The cats is orange.,pl-ungram
