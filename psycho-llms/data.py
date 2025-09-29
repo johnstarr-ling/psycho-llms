@@ -128,7 +128,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('-i', '--input', type=str, default='sents.csv',
+    parser.add_argument('-i', '--input_file', type=str, default='inputs/sentences.csv',
                         help='Input file.')
     
     parser.add_argument('-o', '-output_dir', type=str, default='runs',
@@ -138,23 +138,23 @@ if __name__ == '__main__':
                         help='Number of runs to generate.')
     
     parser.add_argument('-t', '--type', const='build', nargs='?', default='build',
-                        choices=['build', 'align'])
+                        choices=['builder', 'aligner'])
     
     
     args = parser.parse_args()
 
-    if args.type == 'build':
+    if args.type == 'builder':
         exp = Builder()
-        exp.load_stimuli('inputs/sentences.csv')
+        exp.load_stimuli(args.input_file)
 
 
     else:
         exp = Aligner()
-        exp.load_collected_data('inputs/participants.csv')
+        exp.load_collected_data(args.input_file)
 
 
     # run = exp.random_run()
-    
+
     # df = load_data(args.input)
     # master = add_conditions(df)
     # order = ['po_then_do', 'do_then_po', 'alternating']
