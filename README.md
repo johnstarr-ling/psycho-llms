@@ -28,11 +28,11 @@ python -m pip install -r requirements.txt
 `data.py` takes in a `csv` file of either a) human experiment data that contains participant labels and sentence strings, or b) sentence strings & their corresponding item number and conditions. Think ABCs:
 
 For a), use the `Aligner`:
-```python data.py -i $INPUT_FILE -o $OUTPUT_DIR -t builder`
+```python data.py -i $INPUT_FILE -o $OUTPUT_DIR -t builder```
 where `$INPUT_FILE` is the human experiment data and `$OUTPUT_DIR` is the directory where you want to store the runs.
 
 For b), use the `Builder`:
-```python data.py -i $INPUT_FILE -o $OUTPUT_DIR -n $NUM_RUNS -t aligner`
+```python data.py -i $INPUT_FILE -o $OUTPUT_DIR -n $NUM_RUNS -t aligner```
 where `$INPUT_FILE` and `$OUTPUT_DIR` are used as they are in the `Aligner`, and where `$NUM_RUNS` is the total number of runs you want to generate. Note that the `Builder` creates two kinds of runs: random runs (where conditions are balanced across items randomly and then prefixed in a random order), and controlled runs (where conditions are balanced across items randomly and then ordered in a specific way). There are two kinds of controlled runs: alternating (where conditions alternate back and forth every item) and block (where all items for one condition are placed in a row). These two kinds of controlled runs allow you to establish effect baselines. *This script is currently being adopted from some util functions that I've been using the past few years.*
 
 
